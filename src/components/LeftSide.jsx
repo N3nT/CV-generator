@@ -1,21 +1,25 @@
-export default function LeftSide({handleChange, inputValue}) {
+export default function LeftSide(props) {
     
     return(
-        <div className="rightside-wrap">
-            <div className="rightside-info">
-                <label htmlFor="nameInput">Name: </label>
-                <input id="nameInput" type="text" onChange={handleChange} value={inputValue}/>
-                <label htmlFor="last-nameInput">Last name: </label>
-                <input id="last-nameInput" type="text" onChange={handleChange} value={inputValue}/>
+        <div className="leftside-wrap">
+            <div className="leftside-info">
+                <div className="leftside-names">
+                    <label htmlFor="nameInput">Name: </label>
+                    <input id="nameInput" type="text" onChange={props.handleNameChange} value={props.nameValue}/>
+                    <label htmlFor="last-nameInput">Last name: </label>
+                    <input id="last-nameInput" type="text" onChange={props.handleLastnameChange} value={props.lastnameValue}/>
+                </div>
                 <label htmlFor="emailInput">Email: </label>
-                <input id="emailInput" type="email"/>
+                <input id="emailInput" type="email" onChange={props.handleEmailChange} value={props.emailValue}/>
                 <label htmlFor="phoneInput">Phone: </label>
-                <input id="phoneInput" type="number"/>
+                <input id="phoneInput" type="number" onChange={props.handlePhoneChange} value={props.phoneNumberValue}/>
+                <label htmlFor="locationInput">Location: </label>
+                <input id="locationInput" type="text" onChange={props.handleLocationChange} value={props.locationValue}/>
             </div>
            <hr />
            {/* to bedzie osobny component */}
-           <div className="rightside-links">
-            <div className="rightside-linksWrap">
+           <div className="leftside-links">
+            <div className="leftside-linksWrap">
                 <select name="" id="">
                     <option>X</option>
                     <option>LinkedIn</option>
@@ -23,14 +27,14 @@ export default function LeftSide({handleChange, inputValue}) {
                     <option>Website</option>
                     <option>Other</option>
                 </select>
-                <input type="text" placeholder="URL"/>
+                <input type="text" placeholder="URL" onChange={props.handleSocialLinksInputChange}/>
             </div>
-            <button>Add+</button>
+            <button onClick={props.handleSocialLinksAdd}>Add+</button>
            </div>
            <hr />
             {/* to bedzie osobny component */}
-           <div className="rightside-education">
-            <h2 className="rightside-title">Education</h2>
+           <div className="leftside-education">
+            <h2 className="leftside-title">Education</h2>
             <label htmlFor="organizationInput">Organization: </label>
             <input id="organizationInput" type="text"/>
             <label htmlFor="titleInput">Title: </label>
@@ -42,8 +46,8 @@ export default function LeftSide({handleChange, inputValue}) {
             <button>Add+</button>
            </div>
             {/* to bedzie osobny component */}
-           <div className="rightside-workExperience">
-            <h2 className="rightside-title">Work Experience</h2>
+           <div className="leftside-workExperience">
+            <h2 className="leftside-title">Work Experience</h2>
             <label htmlFor="">Company name: </label>
             <input id="companyInput" type="text" />
             <label htmlFor="positionInput">Position Title: </label>

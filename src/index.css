@@ -9,26 +9,36 @@ body{
   color: white;
   font-size: 2rem;
 }
-
-.rightside-wrap{
+.app{
+  display: flex;
+}
+.leftside-wrap{
   display: flex;
   flex-direction: column;
   padding: 3em;
   border: 1px solid white;
   border-radius: 20px;
+  max-width: 700px;
 }
 
-.rightside-info{
-  text-align: center;
+.leftside-info{
+  display: flex;
+  flex-direction: column;
 }
 
-.rightside-info input{
+.leftside-names{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftside-info input{
   margin: 0.5em;
   width: 200px;
   font-size: 1.5rem;
 }
 
-.rightside-links{
+.leftside-links{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,24 +46,40 @@ body{
   margin: 1em 0;
 }
 
-.rightside-linksWrap{
+.leftside-linksWrap{
   margin: 1em;
 }
 
-.rightside-education{
+.leftside-education{
   text-align: center;
 }
 
-.rightside-education .rightside-title{
+.leftside-education .leftside-title{
   text-align: center;
   margin: 0.5em;
 }
 
-.rightside-workExperience{
+.leftside-workExperience{
   text-align: center;
 }
 
-.rightside-workExperience .rightside-title{
+.leftside-workExperience .leftside-title{
   text-align: center;
   margin: 0.5em;
+}
+
+.rightside-wrap{
+  border: 1px solid white;
+  width: 900px;
+  margin-left: 1em;
+  background-color: white;
+}
+
+.rightside-header{
+  background-color: #000000;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
