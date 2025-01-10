@@ -10,7 +10,8 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState("123456789");
   const [location, setLocation] = useState("Unknow");
   const [socialLinksInput, setSocialLinksInput] = useState("");
-  const [socialLinks, setSocialLinks] = useState([{type: "X", url:"chuj.com"}]);
+  const [linksSelect, setLinksSelect] = useState("X");
+  const [socialLinks, setSocialLinks] = useState([{}]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -36,9 +37,18 @@ function App() {
     setSocialLinksInput(e.target.value);
   }
 
+  const handleSelectChange = (e) => {
+    setLinksSelect(e.target.value);
+  }
+
   const handleSocialLinksAdd = () => {
-    setSocialLinks([...socialLinks, socialLinksInput]);
+    setSocialLinks([...socialLinks, {type: linksSelect, url: socialLinksInput}]);
     setSocialLinksInput('');
+  }
+
+  const handleDeleteLink = (linkIndex) => {
+    const result = socialLinks.filter((_, index) => index !== linkIndex)
+    setSocialLinks(result)
   }
 
   return (
@@ -54,7 +64,10 @@ function App() {
                 handleLocationChange={handleLocationChange}
                 locationValue={location}
                 handleSocialLinksInputChange={handleSocialLinksInputChange}
+                handleSelectChange={handleSelectChange}
+                linksSelect={linksSelect}
                 handleSocialLinksAdd={handleSocialLinksAdd}
+                handleDeleteLink={handleDeleteLink}
                 socialLinks={socialLinks} 
                 />
       <RightSide nameValue={name} lastnameValue={lastname} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks}/>

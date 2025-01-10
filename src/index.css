@@ -4,14 +4,21 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Open Sans', serif;
   color: white;
   font-size: 2rem;
 }
+
+.lucide{
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
 .app{
   display: flex;
 }
+
 .leftside-wrap{
   display: flex;
   flex-direction: column;
@@ -71,6 +78,7 @@ body{
 .rightside-wrap{
   border: 1px solid white;
   width: 900px;
+  max-height: 100vh;
   margin-left: 1em;
   background-color: white;
 }
@@ -82,4 +90,33 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.rightside-personalInfoParagraph{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightside-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightside-socialLinks{
+  display: flex;
+  margin-top: 1em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rightside-socialLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  text-decoration: none;
+  color: #000000;
 }

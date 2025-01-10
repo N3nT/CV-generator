@@ -1,3 +1,5 @@
+import { Trash2 } from 'lucide-react';
+
 export default function LeftSide(props) {
     
     return(
@@ -17,19 +19,27 @@ export default function LeftSide(props) {
                 <input id="locationInput" type="text" onChange={props.handleLocationChange} value={props.locationValue}/>
             </div>
            <hr />
-           {/* to bedzie osobny component */}
            <div className="leftside-links">
             <div className="leftside-linksWrap">
-                <select name="" id="">
-                    <option>X</option>
-                    <option>LinkedIn</option>
-                    <option>Instagram</option>
-                    <option>Website</option>
-                    <option>Other</option>
+                <select onChange={props.handleSelectChange} value={props.linksSelect}>
+                    <option value="X">X</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Website">Website</option>
+                    <option value="Other">Other</option>
                 </select>
                 <input type="text" placeholder="URL" onChange={props.handleSocialLinksInputChange}/>
             </div>
             <button onClick={props.handleSocialLinksAdd}>Add+</button>
+           </div>
+           <div className="leftside-actualLinks">
+            {props.socialLinks.map((link, index) => {
+                return(
+                        <div key={index}>
+                            <span>{link.type}</span> <span>{link.url}</span><Trash2 onClick={() => {props.handleDeleteLink(index)}}/>
+                        </div>
+                )
+            })}
            </div>
            <hr />
             {/* to bedzie osobny component */}
