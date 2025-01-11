@@ -10,7 +10,7 @@ function App() {
   const [location, setLocation] = useState("Vatican, os. Lewe 23");
   const [socialLinksInput, setSocialLinksInput] = useState("");
   const [linksSelect, setLinksSelect] = useState("X");
-  const [socialLinks, setSocialLinks] = useState([{}]);
+  const [socialLinks, setSocialLinks] = useState([]);
 
   const handleFullNameChange = (e) => {
     setFullName(e.target.value);
