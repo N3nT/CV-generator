@@ -6,10 +6,8 @@ export default function LeftSide(props) {
         <div className="leftside-wrap">
             <div className="leftside-info">
                 <div className="leftside-names">
-                    <label htmlFor="nameInput">Name: </label>
-                    <input id="nameInput" type="text" onChange={props.handleNameChange} value={props.nameValue}/>
-                    <label htmlFor="last-nameInput">Last name: </label>
-                    <input id="last-nameInput" type="text" onChange={props.handleLastnameChange} value={props.lastnameValue}/>
+                    <label htmlFor="fullNameInput">Full Name: </label>
+                    <input id="fullNameInput" type="text" onChange={props.handleFullNameChange} value={props.fullNameValue}/>
                 </div>
                 <label htmlFor="emailInput">Email: </label>
                 <input id="emailInput" type="email" onChange={props.handleEmailChange} value={props.emailValue}/>

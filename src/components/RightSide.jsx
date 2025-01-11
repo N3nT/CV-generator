@@ -5,7 +5,7 @@ export default function RightSide(props){
         <div className="rightside-wrap">
             <div className="rightside-header">
                 <div className="rightside-personalInfo">
-                    <h2>{props.nameValue} {props.lastnameValue}</h2>
+                    <h2>{props.fullNameValue}</h2>
                 </div>
                 <p className='rightside-personalInfoParagraph'><Phone size={24}/> {props.phoneNumberValue}</p>
                 <p className='rightside-personalInfoParagraph'><Mail size={24}/> {props.emailValue}</p>

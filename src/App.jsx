@@ -4,21 +4,16 @@ import LeftSide from "./components/LeftSide.jsx"
 import RightSide from './components/RightSide.jsx';
 
 function App() {
-  const [name, setName] = useState('First Name');
-  const [lastname, setLastName] = useState('Last Name');
-  const [email, setEmail] = useState("email@email.com");
+  const [fullName, setFullName] = useState('Anthony Kowalski');
+  const [email, setEmail] = useState("email@email.com ");
   const [phoneNumber, setPhoneNumber] = useState("123456789");
-  const [location, setLocation] = useState("Unknow");
+  const [location, setLocation] = useState("Vatican, os. Lewe 23");
   const [socialLinksInput, setSocialLinksInput] = useState("");
   const [linksSelect, setLinksSelect] = useState("X");
   const [socialLinks, setSocialLinks] = useState([{}]);
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  }
-
-  const handleLastnameChange = (e) => {
-    setLastName(e.target.value);
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
   }
 
   const handleEmailChange = (e) => {
@@ -53,10 +48,8 @@ function App() {
 
   return (
     <div className='app'>
-      <LeftSide handleNameChange={handleNameChange} 
-                nameValue={name} 
-                handleLastnameChange={handleLastnameChange} 
-                lastnameValue={lastname} 
+      <LeftSide handleFullNameChange={handleFullNameChange} 
+                fullNameValue={fullName}
                 handleEmailChange={handleEmailChange}
                 emailValue={email} 
                 handlePhoneChange={handlePhoneChange}
@@ -70,7 +63,7 @@ function App() {
                 handleDeleteLink={handleDeleteLink}
                 socialLinks={socialLinks} 
                 />
-      <RightSide nameValue={name} lastnameValue={lastname} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks}/>
+      <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks}/>
     </div>
   )
 }
