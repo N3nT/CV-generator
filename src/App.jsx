@@ -38,7 +38,7 @@ function App() {
 
   const handleSocialLinksAdd = () => {
     setSocialLinks([...socialLinks, {type: linksSelect, url: socialLinksInput}]);
-    setSocialLinksInput('');
+    setSocialLinksInput("");
   }
 
   const handleDeleteLink = (linkIndex) => {
@@ -58,6 +58,7 @@ function App() {
                 locationValue={location}
                 handleSocialLinksInputChange={handleSocialLinksInputChange}
                 handleSelectChange={handleSelectChange}
+                socialLinksInput={socialLinksInput}
                 linksSelect={linksSelect}
                 handleSocialLinksAdd={handleSocialLinksAdd}
                 handleDeleteLink={handleDeleteLink}

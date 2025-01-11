@@ -1,14 +1,12 @@
-import { Trash2 } from 'lucide-react';
+import { Trash2, CirclePlus } from 'lucide-react';
 
 export default function LeftSide(props) {
     
     return(
         <div className="leftside-wrap">
             <div className="leftside-info">
-                <div className="leftside-names">
-                    <label htmlFor="fullNameInput">Full Name: </label>
-                    <input id="fullNameInput" type="text" onChange={props.handleFullNameChange} value={props.fullNameValue}/>
-                </div>
+                <label htmlFor="fullNameInput">Full Name: </label>
+                <input id="fullNameInput" type="text" onChange={props.handleFullNameChange} value={props.fullNameValue}/>
                 <label htmlFor="emailInput">Email: </label>
                 <input id="emailInput" type="email" onChange={props.handleEmailChange} value={props.emailValue}/>
                 <label htmlFor="phoneInput">Phone: </label>
@@ -26,15 +24,15 @@ export default function LeftSide(props) {
                     <option value="Website">Website</option>
                     <option value="Other">Other</option>
                 </select>
-                <input type="text" placeholder="URL" onChange={props.handleSocialLinksInputChange}/>
+                <input type="text" placeholder="URL" onChange={props.handleSocialLinksInputChange} value={props.socialLinksInput}/>
             </div>
-            <button onClick={props.handleSocialLinksAdd}>Add+</button>
+            <button className="leftside-linksButton" onClick={props.handleSocialLinksAdd}>Add {<CirclePlus />}</button>
            </div>
            <div className="leftside-actualLinks">
             {props.socialLinks.map((link, index) => {
                 return(
-                        <div key={index}>
-                            <span>{link.type}</span> <span>{link.url}</span><Trash2 onClick={() => {props.handleDeleteLink(index)}}/>
+                        <div className="leftside-actualLinksElement" key={index}>
+                            <span>{link.type}</span> <span>{link.url}</span><Trash2 color="#ff0000" onClick={() => {props.handleDeleteLink(index)}}/>
                         </div>
                 )
             })}

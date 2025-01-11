@@ -1,7 +1,6 @@
 import { Phone, Mail, MapPin, ExternalLink} from 'lucide-react';
 
 export default function RightSide(props){
-    const len = props.socialLinks.length;
     return(
         <div className="rightside-wrap">
             <div className="rightside-header">
