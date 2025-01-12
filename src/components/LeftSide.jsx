@@ -45,6 +45,8 @@ export default function LeftSide(props) {
             <input id="organizationInput" type="text"/>
             <label htmlFor="titleInput">Title: </label>
             <input id="titleInput" type="text"/>
+            <label htmlFor="eduLocationInput">Location: </label>
+            <input id="eduLocationInput" type="text"/>
             <label htmlFor="startDateInput">Start date: </label>
             <input id="startDateInput" type="date"/>
             <label htmlFor="endDateInput">End date: </label>
@@ -58,6 +60,10 @@ export default function LeftSide(props) {
             <input id="companyInput" type="text" />
             <label htmlFor="positionInput">Position Title: </label>
             <input type="text" className="positionInput" />
+            <label htmlFor="workLocationInput">Location: </label>
+            <input type="text" className="workLocationInput" />
+            <label htmlFor="workDescriptionInput">Description: </label>
+            <textarea type="text" className="workDescriptionInput" />
             <label htmlFor="startDateInput">Start date: </label>
             <input id="startDateInput" type="date"/>
             <label htmlFor="endDateInput">End date: </label>

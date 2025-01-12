@@ -74,7 +74,7 @@ body{
 }
 
 .leftside-actualLinksElement{
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -131,16 +131,17 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  color: #000000;
 }
 
 .rightside-socialLinks{
   display: flex;
-  margin-top: 1em;
+  margin: 1em 0;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .rightside-socialLink{
   display: flex;
   justify-content: center;
@@ -148,4 +149,18 @@ body{
   margin-left: 1em;
   text-decoration: none;
   color: #000000;
+}
+
+.rightside-education, .rightside-work{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.rightside-sectionTitle{
+  text-align: center;
+  margin: 0.5em 2em;
+  background-color: #f0f4ff;
+  border-radius: 10px;
 }
