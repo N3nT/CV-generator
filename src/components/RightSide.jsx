@@ -16,13 +16,31 @@ export default function RightSide(props){
     }
 
     function Education(){
-
-        return(
-            <div className="rightside-education">
-                <h2 className="rightside-sectionTitle">Education</h2>
-
-            </div>
-        )
+        if(props.education){
+            return(
+                <div className="rightside-education">
+                    <h2 className="rightside-sectionTitle">Education</h2>
+                    <div className="rightiside-educationWrap">
+                        {props.education.map((element, index) => {
+                            return (<div key="index" className="rightside-educationElement">
+                            <div className="rightside-educationInfo">
+                                <p className="rightside-educationDates">
+                                    {element.startDate} - {element.endDate}
+                                </p>
+                                <p className="rightside-educationLocation">
+                                    {element.location}
+                                </p>
+                            </div>
+                            <div className="rightside-educationTxt">
+                                <p className="rightside-educationTitle">{element.organisation}</p>
+                                <p className="rightside-educationDescription">{element.title}</p>
+                            </div>
+                        </div>)
+                        })}
+                    </div>
+                </div>
+            )
+        }
     }
 
     function Work() {

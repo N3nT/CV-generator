@@ -48,9 +48,9 @@ export default function LeftSide(props) {
             <label htmlFor="eduLocationInput">Location: </label>
             <input id="eduLocationInput" type="text"/>
             <label htmlFor="startDateInput">Start date: </label>
-            <input id="startDateInput" type="date"/>
+            <input id="startDateInput" type="text"/>
             <label htmlFor="endDateInput">End date: </label>
-            <input id="endDateInput" type="date"/>
+            <input id="endDateInput" type="text"/>
             <button>Add+</button>
            </div>
             {/* to bedzie osobny component */}
@@ -65,9 +65,9 @@ export default function LeftSide(props) {
             <label htmlFor="workDescriptionInput">Description: </label>
             <textarea type="text" className="workDescriptionInput" />
             <label htmlFor="startDateInput">Start date: </label>
-            <input id="startDateInput" type="date"/>
+            <input id="startDateInput" type="text"/>
             <label htmlFor="endDateInput">End date: </label>
-            <input id="endDateInput" type="date"/>
+            <input id="endDateInput" type="text"/>
             <button>Add+</button>
            </div>
         </div>

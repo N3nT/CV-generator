@@ -20,6 +20,7 @@ button {
 	background-color: green;
 	color: white;
   width: 90px;
+  margin-top: 1em;
 }
 
 button .lucide {
@@ -66,7 +67,7 @@ button .lucide {
 }
 
 .leftside-linksWrap {
-	margin: 1em;
+	margin: 1em 1em 0 1em;
 }
 
 .leftside-actualLinks {
@@ -165,4 +166,29 @@ button .lucide {
 	margin: 0.5em 2em;
 	background-color: #f0f4ff;
 	border-radius: 10px;
+}
+
+.rightiside-educationWrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rightside-educationElement{
+  display: flex;
+  width: 80%;
+}
+
+.rightside-educationInfo{
+  width: 300px;
+}
+
+.rightside-educationTitle{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.rightside-educationDescription{
+  font-style: italic;
 }

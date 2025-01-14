@@ -11,6 +11,7 @@ function App() {
   const [socialLinksInput, setSocialLinksInput] = useState("");
   const [linksSelect, setLinksSelect] = useState("X");
   const [socialLinks, setSocialLinks] = useState([]);
+  const [education, setEducation] = useState([{organisation: "PSP Okocim", title: "Podstawowe", location: "Polska, Okocim", startDate: "12/2024", endDate: "present"}]);
 
   const handleFullNameChange = (e) => {
     setFullName(e.target.value);
@@ -64,7 +65,7 @@ function App() {
                 handleDeleteLink={handleDeleteLink}
                 socialLinks={socialLinks} 
                 />
-      <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks}/>
+      <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks} education={education}/>
     </div>
   )
 }
