@@ -104,6 +104,17 @@ button .lucide {
 	margin: 0.5em;
 }
 
+.leftside-actualEducation{
+	width: 100%;
+	margin-top: 1em;
+}
+
+.leftside-actualEducationElement{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
 /* RIGHT SIDE */
 .rightside-wrap {
 	border: 1px solid white;
@@ -178,6 +189,7 @@ button .lucide {
 .rightside-educationElement{
   display: flex;
   width: 80%;
+  margin-bottom: 1em;
 }
 
 .rightside-educationInfo{

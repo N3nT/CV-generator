@@ -41,18 +41,28 @@ export default function LeftSide(props) {
             {/* to bedzie osobny component */}
            <div className="leftside-education">
             <h2 className="leftside-title">Education</h2>
-            <label htmlFor="organizationInput">Organization: </label>
-            <input id="organizationInput" type="text"/>
+            <label htmlFor="organizationInput">Organisation: </label>
+            <input id="organizationInput" type="text" onChange={props.handleEducationOrganisationChange} value={props.educationOrganisation}/>
             <label htmlFor="titleInput">Title: </label>
-            <input id="titleInput" type="text"/>
+            <input id="titleInput" type="text" onChange={props.handleEducationTitleChange} value={props.educationTitle}/>
             <label htmlFor="eduLocationInput">Location: </label>
-            <input id="eduLocationInput" type="text"/>
+            <input id="eduLocationInput" type="text" onChange={props.handleEducationLocationChange} value={props.educationLocation}/>
             <label htmlFor="startDateInput">Start date: </label>
-            <input id="startDateInput" type="text"/>
+            <input id="startDateInput" type="text" onChange={props.handleEducationStartDateChange} value={props.educationStartDate}/>
             <label htmlFor="endDateInput">End date: </label>
-            <input id="endDateInput" type="text"/>
-            <button>Add+</button>
+            <input id="endDateInput" type="text" onChange={props.handleEducationEndDateChange} value={props.educationEndDate}/>
+            <button onClick={props.addEducation}>Add+</button>
+            <div className="leftside-actualEducation">
+                {props.education.map((element, index) => {
+                    return(
+                    <div className="leftside-actualEducationElement" key={index}>
+                        <span>{element.organisation}</span><Trash2 color="#ff0000" onClick={() => {props.handleDeleteEducation(index)}}/>
+                    </div>
+                    )
+                })}
+            </div>
            </div>
+           <hr />
             {/* to bedzie osobny component */}
            <div className="leftside-workExperience">
             <h2 className="leftside-title">Work Experience</h2>
