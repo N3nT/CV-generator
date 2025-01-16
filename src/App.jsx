@@ -2,7 +2,6 @@ import { useState } from 'react'
 //components
 import LeftSide from "./components/LeftSide.jsx"
 import RightSide from './components/RightSide.jsx';
-import { University } from 'lucide-react';
 
 function App() {
   //States
@@ -101,13 +100,50 @@ function App() {
     setEducationEndDate("");
   }
 
-  const handleDeleteEducation = (linkIndex) => {
-    const result = education.filter((_, index) => index !== linkIndex)
+  const handleDeleteEducation = (educationIndex) => {
+    const result = education.filter((_, index) => index !== educationIndex)
     setEducation(result)
   }
 
   //Work experience
+  const handleWorkCompanyChange = (e) => {
+    setWorkCompany(e.target.value);
+  }
 
+  const handleWorkPositionChange = (e) => {
+    setWorkPosition(e.target.value);
+  }
+
+  const handleWorkLocationChange = (e) => {
+    setWorkLocation(e.target.value);
+  }
+
+  const handleWorkDescriptionChange = (e) => {
+    setWorkDescription(e.target.value);
+  }
+
+  const handleWorkStartDateChange = (e) => {
+    setWorkStartDate(e.target.value);
+  }
+
+  const handleWorkEndDateChange = (e) => {
+    setWorkEndDate(e.target.value);
+  }
+
+  const addWork = () => {
+    setWork([...work, {company: workCompany, position: workPosition, location: workLocation, description: workDescription, startDate: workStartDate, endDate: workEndDate}]);
+    setWorkCompany('');
+    setWorkPosition('');
+    setWorkLocation('');
+    setWorkDescription('');
+    setWorkStartDate('');
+    setWorkEndDate('');
+  }
+
+  const deleteWork = (workIndex) => {
+    const result = work.filter((_, index) => index != workIndex)
+    setWork(result);
+  }
 
 
   return (
@@ -142,7 +178,24 @@ function App() {
                 handleEducationEndDateChange={handleEducationEndDateChange}
                 addEducation={addEducation}
                 handleDeleteEducation={handleDeleteEducation}
+
+                work={work}
+                handleWorkCompanyChange={handleWorkCompanyChange}
+                workCompany={workCompany}
+                handleWorkPositionChange={handleWorkPositionChange}
+                workPosition={workPosition}
+                handleWorkLocationChange={handleWorkLocationChange}
+                workLocation={workLocation}
+                handleWorkDescriptionChange={handleWorkDescriptionChange}
+                workDescription={workDescription}
+                handleWorkStartDateChange={handleWorkStartDateChange}
+                workStartDate={workStartDate}
+                handleWorkEndDateChange={handleWorkEndDateChange}
+                workEndDate={workEndDate}
+                addWork={addWork}
+                deleteWork={deleteWork}
                 />
+                
       <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks} education={education} work={work}/>
     </div>
   )

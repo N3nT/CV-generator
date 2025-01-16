@@ -67,18 +67,27 @@ export default function LeftSide(props) {
            <div className="leftside-workExperience">
             <h2 className="leftside-title">Work Experience</h2>
             <label htmlFor="">Company name: </label>
-            <input id="companyInput" type="text" />
+            <input id="companyInput" type="text" onChange={props.handleWorkCompanyChange} value={props.workCompany}/>
             <label htmlFor="positionInput">Position Title: </label>
-            <input type="text" className="positionInput" />
+            <input type="text" className="positionInput" onChange={props.handleWorkPositionChange} value={props.workPosition}/>
             <label htmlFor="workLocationInput">Location: </label>
-            <input type="text" className="workLocationInput" />
+            <input type="text" className="workLocationInput" onChange={props.handleWorkLocationChange} value={props.workLocation}/>
             <label htmlFor="workDescriptionInput">Description: </label>
-            <textarea type="text" className="workDescriptionInput" />
+            <textarea type="text" className="workDescriptionInput" onChange={props.handleWorkDescriptionChange} value={props.workDescription}/>
             <label htmlFor="startDateInput">Start date: </label>
-            <input id="startDateInput" type="text"/>
+            <input id="startDateInput" type="text" onChange={props.handleWorkStartDateChange} value={props.workStartDate}/>
             <label htmlFor="endDateInput">End date: </label>
-            <input id="endDateInput" type="text"/>
-            <button>Add+</button>
+            <input id="endDateInput" type="text" onChange={props.handleWorkEndDateChange} value={props.workEndDate}/>
+            <button onClick={props.addWork}>Add+</button>
+            <div className="leftside-actualEducation">
+                {props.work.map((element, index) => {
+                    return(
+                    <div className="leftside-actualEducationElement" key={index}>
+                        <span>{element.company}</span><Trash2 color="#ff0000" onClick={() => {props.deleteWork(index)}}/>
+                    </div>
+                    )
+                })}
+            </div>
            </div>
         </div>
     )
