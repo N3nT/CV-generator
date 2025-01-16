@@ -20,7 +20,7 @@ export default function RightSide(props){
             return(
                 <div className="rightside-education">
                     <h2 className="rightside-sectionTitle">Education</h2>
-                    <div className="rightiside-educationWrap">
+                    <div className="rightside-educationWrap">
                         {props.education.map((element, index) => {
                             return (<div key="index" className="rightside-educationElement">
                             <div className="rightside-educationInfo">
@@ -32,8 +32,8 @@ export default function RightSide(props){
                                 </p>
                             </div>
                             <div className="rightside-educationTxt">
-                                <p className="rightside-educationTitle">{element.organisation}</p>
-                                <p className="rightside-educationDescription">{element.title}</p>
+                                <p className="rightside-educationOrganisation">{element.organisation}</p>
+                                <p className="rightside-educationTitle">{element.title}</p>
                             </div>
                         </div>)
                         })}
@@ -48,6 +48,25 @@ export default function RightSide(props){
         return(
             <div className="rightside-work">
                 <h2 className="rightside-sectionTitle">Work Experience</h2>
+                <div className="rightside-workWrap">
+                        {props.work.map((element, index) => {
+                            return (<div key="index" className="rightside-workElement">
+                            <div className="rightside-workInfo">
+                                <p className="rightside-workDates">
+                                    {element.startDate} - {element.endDate}
+                                </p>
+                                <p className="rightside-workLocation">
+                                    {element.location}
+                                </p>
+                            </div>
+                            <div className="rightside-workTxt">
+                                <p className="rightside-workCompany">{element.company}</p>
+                                <p className="rightside-workPosition">{element.position}</p>
+                                <p className="rightside-workEducation">{element.description}</p>
+                            </div>
+                        </div>)
+                        })}
+                    </div>
             </div>
         )
     }

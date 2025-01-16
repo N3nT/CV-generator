@@ -2,6 +2,7 @@ import { useState } from 'react'
 //components
 import LeftSide from "./components/LeftSide.jsx"
 import RightSide from './components/RightSide.jsx';
+import { University } from 'lucide-react';
 
 function App() {
   //States
@@ -17,7 +18,7 @@ function App() {
   const [socialLinks, setSocialLinks] = useState([]);
 
   //Education
-  const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState([{organisation: "Oxford University", title: "Computer Science", location:"Oxford, UK", startDate: "09/2021", endDate: "06/2024"}]);
   const [educationOrganisation, setEducationOrganisation] = useState('');
   const [educationTitle, setEducationTitle] = useState('');
   const [educationLocation, setEducationLocation] = useState('');
@@ -25,6 +26,7 @@ function App() {
   const [educationEndDate, setEducationEndDate] = useState('');
 
   //Work
+  const [work, setWork] = useState([{company: "Google", position: "Frontend Developer", location: "New York, USA", description: "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.", startDate: "08/2024", endDate: "present"}]);
   const [workCompany, setWorkCompany] = useState('');
   const [workPosition, setWorkPosition] = useState('');
   const [workLocation, setWorkLocation] = useState('');
@@ -104,6 +106,9 @@ function App() {
     setEducation(result)
   }
 
+  //Work experience
+
+
 
   return (
     <div className='app'>
@@ -138,7 +143,7 @@ function App() {
                 addEducation={addEducation}
                 handleDeleteEducation={handleDeleteEducation}
                 />
-      <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks} education={education}/>
+      <RightSide fullNameValue={fullName} emailValue={email} phoneNumberValue={phoneNumber} locationValue={location} socialLinks={socialLinks} education={education} work={work}/>
     </div>
   )
 }

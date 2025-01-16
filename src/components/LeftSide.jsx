@@ -56,7 +56,7 @@ export default function LeftSide(props) {
                 {props.education.map((element, index) => {
                     return(
                     <div className="leftside-actualEducationElement" key={index}>
-                        <span>{element.organisation}</span><Trash2 color="#ff0000" onClick={() => {props.handleDeleteEducation(index)}}/>
+                        <span>{element.title}</span><Trash2 color="#ff0000" onClick={() => {props.handleDeleteEducation(index)}}/>
                     </div>
                     )
                 })}

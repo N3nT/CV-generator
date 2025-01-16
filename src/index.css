@@ -179,28 +179,38 @@ button .lucide {
 	border-radius: 10px;
 }
 
-.rightiside-educationWrap{
+.rightside-educationWrap,
+.rightside-workWrap{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.rightside-educationElement{
+.rightside-educationElement, 
+.rightside-workElement{
   display: flex;
   width: 80%;
   margin-bottom: 1em;
 }
 
-.rightside-educationInfo{
+.rightside-educationInfo,
+.rightside-workInfo{
   width: 300px;
 }
 
-.rightside-educationTitle{
+.rightside-educationOrganisation,
+.rightside-workCompany{
   font-weight: bold;
   font-size: 2rem;
 }
 
-.rightside-educationDescription{
+.rightside-educationTitle,
+.rightside-workPosition{
   font-style: italic;
+}
+
+.rightside-workEducation{
+	font-size: 1.3rem;
+	max-width: 425px;
 }
