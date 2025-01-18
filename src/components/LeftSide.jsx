@@ -1,7 +1,6 @@
 import { Trash2, CirclePlus } from 'lucide-react';
 
 export default function LeftSide(props) {
-    
     return(
         <div className="leftside-wrap">
             <div className="leftside-info">
@@ -10,7 +9,7 @@ export default function LeftSide(props) {
                 <label htmlFor="emailInput">Email: </label>
                 <input id="emailInput" type="email" onChange={props.handleEmailChange} value={props.emailValue}/>
                 <label htmlFor="phoneInput">Phone: </label>
-                <input id="phoneInput" type="number" onChange={props.handlePhoneChange} value={props.phoneNumberValue}/>
+                <input id="phoneInput" type="text" onChange={props.handlePhoneChange} value={props.phoneNumberValue}/>
                 <label htmlFor="locationInput">Location: </label>
                 <input id="locationInput" type="text" onChange={props.handleLocationChange} value={props.locationValue}/>
             </div>
@@ -92,3 +91,4 @@ export default function LeftSide(props) {
         </div>
     )
 }
+

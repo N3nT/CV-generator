@@ -5,11 +5,11 @@ import RightSide from './components/RightSide.jsx';
 
 function App() {
   //States
-  //Personal Info
-  const [fullName, setFullName] = useState('Anthony Kowalski');
+  //Personal Info 
+  const [fullName, setFullName] = useState('Joe Doe');
   const [email, setEmail] = useState("email@email.com ");
-  const [phoneNumber, setPhoneNumber] = useState("123456789");
-  const [location, setLocation] = useState("Vatican, os. Lewe 23");
+  const [phoneNumber, setPhoneNumber] = useState("123 456 789");
+  const [location, setLocation] = useState("5960 W 85th Pl Los Angeles, California(CA), 90045");
 
   //Links
   const [socialLinksInput, setSocialLinksInput] = useState("");
@@ -26,7 +26,7 @@ function App() {
 
   //Work
   const [work, setWork] = useState([{company: "Google", position: "Frontend Developer", location: "New York, USA", description: "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.", startDate: "08/2024", endDate: "present"}]);
-  const [workCompany, setWorkCompany] = useState('');
+  const [workCompany, setWorkCompany] = useState();
   const [workPosition, setWorkPosition] = useState('');
   const [workLocation, setWorkLocation] = useState('');
   const [workDescription, setWorkDescription] = useState('');
